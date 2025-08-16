@@ -12,7 +12,7 @@ A React chat application with OpenAI GPT-5 integration.
 1. Clone the repository
 
    ```bash
-   git clone (https://github.com/gitamit020/compie-task.git)
+   git clone https://github.com/gitamit020/compie-task.git
    cd ai-chat-app
    ```
 
