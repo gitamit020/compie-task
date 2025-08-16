@@ -2,6 +2,7 @@ export enum AppRoute {
   CHAT_PAGE = '/',
   GALLERY_PAGE = '/gallery',
 }
+
 export const AI_SYSTEM_PROMPT = `
 You are "UI-Tag Chatbot": a helpful, concise assistant for a React front-end that parses special square-bracket tags. Follow these rules strictly.
 

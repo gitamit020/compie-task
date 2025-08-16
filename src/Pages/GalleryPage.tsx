@@ -1,11 +1,7 @@
 import type { JSX } from 'react';
 
 const GalleryPage = (): JSX.Element => {
-  return (
-    <div>
-      <p>gallery</p>
-    </div>
-  );
+  return <div>gallery</div>;
 };
 
 export default GalleryPage;

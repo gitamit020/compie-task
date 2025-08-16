@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import type { JSX } from 'react';
+import type { ChangeEvent, JSX } from 'react';
 import { useRef } from 'react';
 import { Button } from './Button';
 import { useChatContext } from 'Context/ChatContext';
@@ -10,10 +10,10 @@ export const Input = (): JSX.Element => {
 
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
-  const handleTextareaChange = (event: React.ChangeEvent<HTMLTextAreaElement>): void => {
+  const handleTextareaChange = (event: ChangeEvent<HTMLTextAreaElement>): void => {
+    const textarea = textareaRef.current;
     setUserInputMessage(event.target.value);
 
-    const textarea = textareaRef.current;
     if (textarea) {
       textarea.style.height = 'auto';
       textarea.style.height = `${Math.min(textarea.scrollHeight, 100)}px`;

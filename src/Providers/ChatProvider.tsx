@@ -1,9 +1,9 @@
 import { ChatContext, type ChatMessage } from 'Context/ChatContext';
 import { useTextResponseMutation } from 'Queries/hooks';
-import { useEffect, useState, type JSX } from 'react';
+import { useEffect, useState, type JSX, type KeyboardEvent } from 'react';
 import { v4 as uuid } from 'uuid';
 
-export const ChatContextProvider = ({ children }: { children: JSX.Element }) => {
+export const ChatContextProvider = ({ children }: { children: JSX.Element }): JSX.Element => {
   const [userInputMessage, setUserInputMessage] = useState<string>('');
   const [conversationHistory, setConversationHistory] = useState<ChatMessage[]>([]);
 
@@ -29,7 +29,7 @@ export const ChatContextProvider = ({ children }: { children: JSX.Element }) => 
     setUserInputMessage('');
   };
 
-  const handleKeyPressInTextarea = (event: React.KeyboardEvent): void => {
+  const handleKeyPressInTextarea = (event: KeyboardEvent): void => {
     if (event.key === 'Enter' && !event.shiftKey) {
       event.preventDefault();
       handleSendMessageToAi();

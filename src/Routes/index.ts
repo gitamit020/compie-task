@@ -1,2 +1,2 @@
 export { router } from 'Routes/root';
-export { chatRoute as homeRoute, galleryRoute as aboutRoute, rootRoute } from 'Routes/routes';
+export { chatRoute, galleryRoute, rootRoute } from 'Routes/routes';

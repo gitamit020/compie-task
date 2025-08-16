@@ -33,6 +33,7 @@ export const TagParser = ({ content }: TagParserProps): JSX.Element => {
       switch (tagType) {
         case 'quiz':
           const options = attrs.options?.split('|') || [];
+
           parts.push(
             <QuizContainer key={match.index}>
               <QuizQuestion>{attrs.question}</QuizQuestion>

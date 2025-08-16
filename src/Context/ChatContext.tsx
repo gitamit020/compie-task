@@ -1,4 +1,4 @@
-import { createContext, useContext } from 'react';
+import { createContext, useContext, type KeyboardEvent } from 'react';
 
 type ChatMessage = {
   id: string;
@@ -14,16 +14,18 @@ type ChatContextType = {
   isGeneratingResponse: boolean;
   hasGenerationError: boolean;
   handleSendMessageToAi: () => void;
-  handleKeyPressInTextarea: (event: React.KeyboardEvent) => void;
+  handleKeyPressInTextarea: (event: KeyboardEvent) => void;
 };
 
 export const ChatContext = createContext<ChatContextType | undefined>(undefined);
 
 export const useChatContext = () => {
   const context = useContext(ChatContext);
+
   if (!context) {
     throw new Error('useChatContext must be used within ChatProvider');
   }
+
   return context;
 };
 

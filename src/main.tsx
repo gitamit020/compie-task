@@ -18,7 +18,6 @@ root.render(
           <RouterProvider router={router} />
         </ChatContextProvider>
       </StyledProvider>
-      {/* {import.meta.env.DEV && <ReactQueryDevtools initialIsOpen={false} />} */}
     </QueryProvider>
   </StrictMode>,
 );
