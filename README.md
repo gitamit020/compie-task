@@ -13,7 +13,6 @@ A React chat application with OpenAI GPT-5 integration.
 
    ```bash
    git clone https://github.com/gitamit020/compie-task.git
-   cd ai-chat-app
    ```
 
 2. Install dependencies
@@ -24,6 +23,7 @@ A React chat application with OpenAI GPT-5 integration.
 
 3. Create `.env` file
    ```env
+   VITE_BASE_URL=https://api.openai.com/v1
    VITE_OPENAI_API_KEY=your-openai-api-key-here
    ```
 
